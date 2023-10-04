@@ -25,3 +25,18 @@ const person = {
 }
 
 console.log(person.display());
+
+//Explicit Binding - this keyword
+
+function ageVerify() {
+    if(this.age > 18 ) {
+        console.log('You are eligible to vote');
+    } else {
+        console.log('You are not eligible to vote');
+    } 
+}
+
+const person1 = {age: 20};
+const person2 = {age: 17};
+ageVerify.call(person1);
+ageVerify.call(person2);
