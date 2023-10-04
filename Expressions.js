@@ -12,3 +12,16 @@ for ( const i of func() ) {
 }
 
 console.log(obj);
+
+//Implicit Binding - this keyword
+
+const person = {
+    name: 'John',
+    age: 23,
+    display: function() {
+        return 'My name is ' + this.name + ' and I am ' + this.age + ' years old';
+        
+    }
+}
+
+console.log(person.display());
