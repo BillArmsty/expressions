@@ -40,3 +40,13 @@ const person1 = {age: 20};
 const person2 = {age: 17};
 ageVerify.call(person1);
 ageVerify.call(person2);
+
+
+//Default Binding - this keyword
+
+const age = 22;
+function verifyAge() {
+    return this.age;
+}
+
+console.log(verifyAge());
